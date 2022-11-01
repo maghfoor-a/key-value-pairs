@@ -1,3 +1,5 @@
+import { exit } from "process";
+
 /*Write a function, `printAllKeyValuePairs(obj)` which takes an object with unknown content and prints to console, one per line, each **key** and **value** in the object.
 
 const characters = {
@@ -23,5 +25,15 @@ PROGRAMME printAllKeyValuePairs(CHARACTERS):
 END.
 
 */
+function printAllKeyValuePairs(characters: {[key: string]: any}): void {
+    for (const key in characters) {
+        console.log(key, characters[key])
+    }
+}
+printAllKeyValuePairs({
+    Bruce: "Hulk",
+    Peter: "Spiderman",
+    Ororo: "Storm"
+  });
 
 
